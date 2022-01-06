@@ -1,0 +1,27 @@
+I commented out "using namespace std" in testcritter.cpp. and critter.cpp
+These are the errors:
+identifier "string" is undefined
+identifier "cout" is undefined
+- identifier "endl" is undefined
+- identifier "cin" is undefined
+- too few arguments in function call
+
+I commented out "using namespace std" in critter.cpp
+These are the errors:
+declaration is incompatible with "void Critter::setName"
+identifier "string" is undefined
+identifier "cout" is undefined
+identifier "endl" is undefined
+
+I get these errors because the string class, the cout, cin and endl commands
+are defined on namespace std.By putting std:: before the words that show errors 
+I can solve these errors.
+
+If I remove "Critter::" before getHunger() in Critter.cpp 
+I get this error: identifier "hunger" is undefined
+The variable hunger is declared as private in critter.h so to solve this
+erroe, I should declare hunger as a public variable in critter.h.
+I should put the function void getHunger() from critter.cpp
+to testcritter.cpp.
+
+
